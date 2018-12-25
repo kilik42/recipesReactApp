@@ -21,9 +21,25 @@ export class RecipeList extends Component { // eslint-disable-line react/prefer-
      <h1 className="text-slanted">recipe list</h1>
   </div>
 </div>
-</div>
 {/* end of title */}
-        <Recipe/>
+
+<div className="row">
+  {
+    recipes.map(recipe =>{
+      return(
+        <Recipe
+        key={recipe.recipe_id}
+        recipe={recipe} />
+
+
+      )
+    })
+  }
+</div>
+
+</div>
+
+
       </React.Fragment>
     );
   }
