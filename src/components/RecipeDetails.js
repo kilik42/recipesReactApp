@@ -11,13 +11,13 @@ export class RecipeDetails extends Component { // eslint-disable-line react/pref
 
 
   getRecipes(){
-    
+
   }
   render() {
     return (
       <React.Fragment>
         <h1> Hello from details</h1>
-      </React.Frament>
+      </React.Fragment>
     );
   }
 }

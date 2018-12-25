@@ -8,7 +8,7 @@ export class RecipeSearch extends Component { // eslint-disable-line react/prefe
     return (
       <React.Fragment>
         <h1>hello from search</h1>
-      </React.Frament>
+      </React.Fragment>
     );
   }
 }

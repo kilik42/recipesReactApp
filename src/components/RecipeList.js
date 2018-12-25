@@ -9,10 +9,12 @@ export class RecipeList extends Component { // eslint-disable-line react/prefer-
   render() {
     return (
       <React.Fragment>
-        <h1> Hello from list</h1>
+
         <RecipeSearch/>
+
+        
         <Recipe/>
-      </React.Frament>
+      </React.Fragment>
     );
   }
 }
