@@ -9,7 +9,7 @@ export class RecipeList extends Component { // eslint-disable-line react/prefer-
 
 
   render() {
-    const{recipes} = this.props;
+    const{recipes, handleDetails} = this.props;
     return (
       <React.Fragment>
 
@@ -29,7 +29,11 @@ export class RecipeList extends Component { // eslint-disable-line react/prefer-
       return(
         <Recipe
         key={recipe.recipe_id}
-        recipe={recipe} />
+        recipe={recipe}
+
+        handleDetails = {()=>handleDetails(0, recipe.recipe.id)}
+
+        />
 
 
       )

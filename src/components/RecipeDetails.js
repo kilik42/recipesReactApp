@@ -34,6 +34,17 @@ state = {
 async componentDidMount(){
   const id = this.props.id;
   const url = `https://www.food2fork.com/api/search?key=c7ea33defcca426cb91feb5cf22b4e06&rId=${id}`;
+  try {
+      const data = await fetch(this.state.url);
+      const jsonData = await data.json();
+      this.setState((state,props)=>
+    {
+      return recipe= jsonData.recipe
+    });
+    } catch (error) {
+      console.log(error);
+    }
+
 }
   render() {
     const {
@@ -44,6 +55,9 @@ async componentDidMount(){
        title,
        ingredients
       } = this.state.recipe;
+
+      const{handleIndex} = this.props
+
     return (
       <React.Fragment>
         <div className="container">
@@ -52,6 +66,7 @@ async componentDidMount(){
               <button
                 type="button"
                 className="btn btn-warning mb-5 text-capitalize"
+                onClick={()=> handleIndex(1)}
               >
                 back to recipe list
               </button>
